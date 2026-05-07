@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import api from '../api/axios';
-import { Plus, Pencil, Trash2, X, Search, Phone, Mail } from 'lucide-react';
+import { Plus, Pencil, Trash2, X, Search, Phone, Mail, Users } from 'lucide-react';
 
 const STATUS_LABELS = {
   novo: 'Novo',
