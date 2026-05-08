@@ -5,16 +5,12 @@ class LeadService extends BaseService {
     super('leads');
   }
 
-  // Override findAll para incluir o atendente relacionado
   async findAll(filters = {}) {
-    return super.findAll(filters, {
-      selectFields: '*, assigned_user:users!leads_assigned_user_id_fkey(id, name)',
-    });
+    return super.findAll(filters);
   }
 
-  // Override findById para incluir dados relacionados
   async findById(id) {
-    return super.findById(id, '*, assigned_user:users!leads_assigned_user_id_fkey(id, name)');
+    return super.findById(id);
   }
 }
 
